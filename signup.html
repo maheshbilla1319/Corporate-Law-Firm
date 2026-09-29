@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Create your Sterling & Co. Law Firm account">
+
+    <title>Sign Up | Sterling & Co. Law Firm</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Signup CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+<main>
+
+    <!-- =================================================
+         SIGNUP SECTION
+    ================================================== -->
+
+    <section class="signup-page">
+
+        <!-- Animated Navy Background -->
+
+        <div class="animated-background" aria-hidden="true">
+
+            <span class="glow glow-one"></span>
+            <span class="glow glow-two"></span>
+
+            <span class="legal-line line-one"></span>
+            <span class="legal-line line-two"></span>
+            <span class="legal-line line-three"></span>
+
+            <span class="ring ring-one"></span>
+            <span class="ring ring-two"></span>
+
+            <span class="square square-one"></span>
+            <span class="square square-two"></span>
+
+            <span class="dot dot-one"></span>
+            <span class="dot dot-two"></span>
+            <span class="dot dot-three"></span>
+
+        </div>
+
+
+        <!-- Back Home -->
+
+        <a
+            href="index.html"
+            class="back-home"
+            aria-label="Back to home">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+
+        <!-- Signup Card -->
+
+        <div
+            class="signup-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000">
+
+            <!-- Top Decoration -->
+
+            <div class="card-top-line"></div>
+
+
+            <!-- Heading -->
+
+            <div class="card-heading">
+
+                       <a href="index.html" class="logo" aria-label="Sterling & Co. Law Firm Home">
+    <img
+        src="assets/img.webp"
+        alt="Sterling & Co. Law Firm"
+    >
+</a>
+
+                <span class="form-label">
+                    STERLING & CO. LAW FIRM
+                </span>
+
+                <h1>
+                    Create Account
+                </h1>
+
+                <p>
+                    Register your account to access our
+                    secure legal platform.
+                </p>
+
+            </div>
+
+
+            <!-- Form -->
+
+            <form
+                id="signupForm"
+                novalidate>
+
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name">
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="nameError">
+                    </small>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email">
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="emailError">
+                    </small>
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel">
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="phoneError">
+                    </small>
+
+                </div>
+
+
+                <!-- Role -->
+
+                <div class="form-group">
+
+                    <label>
+                        Select Role
+                    </label>
+
+                    <div class="role-options">
+
+                      
+
+
+                        <label class="role-card">
+
+                            <input
+                                type="radio"
+                                name="role"
+                                value="lawyer">
+
+                            <span class="role-content">
+
+                                <span class="role-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </span>
+
+                                <span class="role-text">
+
+                                    <strong>Lawyer</strong>
+
+                                    <small>
+                                        Legal professional
+                                    </small>
+
+                                </span>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="role-card">
+
+                            <input
+                                type="radio"
+                                name="role"
+                                value="admin">
+
+                            <span class="role-content">
+
+                                <span class="role-icon">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </span>
+
+                                <span class="role-text">
+
+                                    <strong>Admin</strong>
+
+                                    <small>
+                                        System administration
+                                    </small>
+
+                                </span>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="roleError">
+                    </small>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password">
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Show password">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="passwordError">
+                    </small>
+
+                </div>
+
+
+                <!-- Confirm Password -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password">
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="confirmPasswordToggle"
+                            aria-label="Show confirm password">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="confirmPasswordError">
+                    </small>
+
+                </div>
+
+
+                <!-- Terms -->
+
+                <div class="terms-row">
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            id="terms">
+
+                        <span class="custom-checkbox"></span>
+
+                        <span>
+                            I agree to the
+                            <a href="404.html">
+                                Terms & Conditions
+                            </a>
+                        </span>
+
+                    </label>
+
+                </div>
+
+                <small
+                    class="error-message"
+                    id="termsError">
+                </small>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="signup-btn">
+
+                    <span>
+                        Create Account
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <!-- Login -->
+
+                <div class="login-link">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="login.html">
+                        Sign In
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Signup JS -->
+
+<script src="js/signup.js"></script>
+
+</body>
+</html>

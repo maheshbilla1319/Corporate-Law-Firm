@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Secure login for Sterling & Co. Law Firm">
+
+    <title>Login | Sterling & Co. Law Firm</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+<main>
+
+    <section class="login-page">
+
+        <!-- Animated Background -->
+        <div class="animated-background" aria-hidden="true">
+
+            <span class="glow glow-one"></span>
+            <span class="glow glow-two"></span>
+
+            <span class="legal-line line-one"></span>
+            <span class="legal-line line-two"></span>
+            <span class="legal-line line-three"></span>
+
+            <span class="ring ring-one"></span>
+            <span class="ring ring-two"></span>
+
+            <span class="square square-one"></span>
+            <span class="square square-two"></span>
+
+            <span class="dot dot-one"></span>
+            <span class="dot dot-two"></span>
+            <span class="dot dot-three"></span>
+
+        </div>
+
+        <!-- Back Home -->
+        <a href="index.html" class="back-home" aria-label="Back to home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <!-- Login Card -->
+        <div
+            class="login-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000">
+
+            <div class="card-top-line"></div>
+
+            <!-- Heading -->
+            <div class="card-heading">
+
+                <a href="index.html" class="logo" aria-label="Sterling & Co. Law Firm Home">
+    <img
+        src="assets/img.webp"
+        alt="Sterling & Co. Law Firm"
+    >
+</a>
+
+                <span class="form-label">
+                    STERLING & CO. LAW FIRM
+                </span>
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Sign in to access your secure legal platform.
+                </p>
+
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" novalidate>
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email">
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="emailError">
+                    </small>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <div class="password-label-row">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <a href="404.html">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password">
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Show password">
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="passwordError">
+                    </small>
+
+                </div>
+
+
+                <!-- Role -->
+                <div class="form-group">
+
+                    <label>
+                        Login As
+                    </label>
+
+                    <div class="role-options">
+
+
+
+                        <label class="role-card">
+
+                            <input
+                                type="radio"
+                                name="role"
+                                value="lawyer">
+
+                            <span class="role-content">
+
+                                <span class="role-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </span>
+
+                                <span class="role-text">
+                                    <strong>Lawyer</strong>
+                                    <small>Lawyer portal</small>
+                                </span>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="role-card">
+
+                            <input
+                                type="radio"
+                                name="role"
+                                value="admin">
+
+                            <span class="role-content">
+
+                                <span class="role-icon">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </span>
+
+                                <span class="role-text">
+                                    <strong>Admin</strong>
+                                    <small>Admin portal</small>
+                                </span>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="roleError">
+                    </small>
+
+                </div>
+
+
+                <!-- Remember Me -->
+                <div class="remember-row">
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            id="remember">
+
+                        <span class="custom-checkbox"></span>
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    class="login-btn">
+
+                    <span>Sign In</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <!-- Signup -->
+                <div class="signup-link">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+                    <a href="signup.html">
+                        Create Account
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Custom JS -->
+<script src="js/login.js"></script>
+
+</body>
+</html>

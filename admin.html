@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sterling Law — Admin Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- AOS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    >
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         SIDEBAR OVERLAY
+    ================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <div class="sidebar-top">
+
+            <a
+                href="#dashboard"
+                class="admin-logo"
+                data-section="dashboard"
+            >
+
+                <img
+                    src="assets/img.webp"
+                    alt="Sterling Law"
+                >
+
+            </a>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                type="button"
+                aria-label="Close sidebar"
+                title="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             ADMIN PROFILE
+        ================================================== -->
+
+        <div
+            class="admin-profile"
+            data-aos="fade-right"
+        >
+
+            <div class="profile-image">
+
+                <img
+                    src="assets/img15 (2).webp"
+                    alt="Admin Profile"
+                >
+
+            </div>
+
+            <div class="profile-info">
+
+                <h3>
+                    James Sterling
+                </h3>
+
+                <p>
+                    <span></span>
+                    Administrator
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="#dashboard"
+                class="sidebar-link active"
+                data-section="dashboard"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="#cases"
+                class="sidebar-link"
+                data-section="cases"
+            >
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <span>
+                    Cases
+                </span>
+
+            </a>
+
+
+            <a
+                href="#clients"
+                class="sidebar-link"
+                data-section="clients"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    Clients
+                </span>
+
+            </a>
+
+
+            <a
+                href="#attorneys"
+                class="sidebar-link"
+                data-section="attorneys"
+            >
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                <span>
+                    Attorneys
+                </span>
+
+            </a>
+
+
+            <a
+                href="#appointments"
+                class="sidebar-link"
+                data-section="appointments"
+            >
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+            <a
+                href="#documents"
+                class="sidebar-link"
+                data-section="documents"
+            >
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span>
+                    Documents
+                </span>
+
+            </a>
+
+
+            <p class="nav-label second-label">
+                MANAGEMENT
+            </p>
+
+
+            <a
+                href="#reports"
+                class="sidebar-link"
+                data-section="reports"
+            >
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <a
+                href="#settings"
+                class="sidebar-link"
+                data-section="settings"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             LOGOUT
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="login.html"
+                class="logout-btn"
+                id="logoutBtn"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main
+        class="admin-main"
+        id="dashboard"
+    >
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open sidebar"
+                    aria-expanded="false"
+                    title="Open sidebar"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div>
+
+                    <p class="header-eyebrow">
+                        STERLING LAW
+                    </p>
+
+                    <h1>
+                        Admin Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                    type="button"
+                    aria-label="Notifications"
+                    title="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <img
+                        src="assets/img15 (2).webp"
+                        alt="James Sterling"
+                    >
+
+                    <div>
+
+                        <strong>
+                            James Sterling
+                        </strong>
+
+                        <small>
+                            Administrator
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- =================================================
+                 DASHBOARD / WELCOME
+            ================================================== -->
+
+            <section
+                class="welcome-banner dashboard-section"
+                data-section-target="dashboard"
+                data-aos="fade-up"
+            >
+
+                <div class="welcome-content">
+
+                    <span class="eyebrow">
+                        ADMIN OVERVIEW
+                    </span>
+
+                    <h2>
+                        Welcome back, James.
+                    </h2>
+
+                    <p>
+                        Here's what's happening across
+                        Sterling Law today.
+                    </p>
+
+                    <a
+                        href="404.html"
+                        class="gold-btn"
+                        data-section="reports"
+                    >
+
+                        View Reports
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="welcome-image">
+
+                    <img
+                        src="assets/img1.webp"
+                        alt="Sterling Law Office"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATS
+            ================================================== -->
+
+            <section class="stats-grid">
+
+                <article
+                    class="stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Active Cases
+                        </span>
+
+                        <h3
+                            class="counter"
+                            data-target="248"
+                        >
+                            0
+                        </h3>
+
+                        <p>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.5% this month
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Total Clients
+                        </span>
+
+                        <h3
+                            class="counter"
+                            data-target="1842"
+                        >
+                            0
+                        </h3>
+
+                        <p>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.2% this month
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                >
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Appointments
+                        </span>
+
+                        <h3
+                            class="counter"
+                            data-target="76"
+                        >
+                            0
+                        </h3>
+
+                        <p>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            5.4% this week
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                >
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Documents
+                        </span>
+
+                        <h3
+                            class="counter"
+                            data-target="936"
+                        >
+                            0
+                        </h3>
+
+                        <p>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            16.8% this month
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 CASES
+            ================================================== -->
+
+            <section
+                class="dashboard-grid dashboard-section"
+                id="cases"
+                data-section-target="cases"
+            >
+
+                <div
+                    class="dashboard-card cases-card"
+                    data-aos="fade-right"
+                >
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                CASE MANAGEMENT
+                            </span>
+
+                            <h2>
+                                Recent Cases
+                            </h2>
+
+                        </div>
+
+                        <a href="404.html">
+                            View All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Case
+                                    </th>
+
+                                    <th>
+                                        Client
+                                    </th>
+
+                                    <th>
+                                        Attorney
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Corporate Merger
+                                        </strong>
+
+                                        <small>
+                                            #SL-2481
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Robert Williams
+                                    </td>
+
+                                    <td>
+                                        Sarah Mitchell
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Property Dispute
+                                        </strong>
+
+                                        <small>
+                                            #SL-2478
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Emma Davis
+                                    </td>
+
+                                    <td>
+                                        Michael Brown
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Employment Claim
+                                        </strong>
+
+                                        <small>
+                                            #SL-2474
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Daniel Wilson
+                                    </td>
+
+                                    <td>
+                                        Sarah Mitchell
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            Estate Planning
+                                        </strong>
+
+                                        <small>
+                                            #SL-2469
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        Olivia Taylor
+                                    </td>
+
+                                    <td>
+                                        James Sterling
+                                    </td>
+
+                                    <td>
+                                        <span class="status closed">
+                                            Closed
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="office-card"
+                    data-aos="fade-left"
+                >
+
+                    <div class="office-image">
+
+                        <img
+                            src="assets/img8.webp"
+                            alt="Lawyers discussing a case"
+                        >
+
+                        <div class="image-overlay"></div>
+
+                        <div class="office-caption">
+
+                            <span>
+                                STERLING LAW
+                            </span>
+
+                            <h3>
+                                Excellence in every case.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="office-bottom">
+
+                        <div>
+
+                            <strong>
+                                98.6%
+                            </strong>
+
+                            <span>
+                                Client Satisfaction
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                24+
+                            </strong>
+
+                            <span>
+                                Years Experience
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CLIENTS
+            ================================================== -->
+
+            <section
+                class="dashboard-card dashboard-section admin-extra-section"
+                id="clients"
+                data-section-target="clients"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            CLIENT MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Client Overview
+                        </h2>
+
+                    </div>
+
+                    <a href="404.html" class="outline-btn">
+                        View Clients
+                    </a>
+
+                </div>
+
+
+                <div class="mini-grid">
+
+                    <div class="mini-card">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <strong>
+                            1,842
+                        </strong>
+
+                        <span>
+                            Total Clients
+                        </span>
+
+                    </div>
+
+
+                    <div class="mini-card">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        <strong>
+                            36
+                        </strong>
+
+                        <span>
+                            New This Month
+                        </span>
+
+                    </div>
+
+
+                    <div class="mini-card">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        <strong>
+                            1,526
+                        </strong>
+
+                        <span>
+                            Active Clients
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ATTORNEYS
+            ================================================== -->
+
+            <section
+                class="dashboard-card dashboard-section admin-extra-section"
+                id="attorneys"
+                data-section-target="attorneys"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            TEAM MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Attorneys
+                        </h2>
+
+                    </div>
+
+                    <a href="404.html" class="outline-btn">
+                        Manage Team
+                    </a>
+
+                </div>
+
+
+                <div class="attorney-list">
+
+                    <div class="attorney-item">
+
+                        <div class="attorney-avatar">
+                            SM
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Sarah Mitchell
+                            </strong>
+
+                            <span>
+                                Senior Attorney
+                            </span>
+
+                        </div>
+
+                        <b>
+                            42 Cases
+                        </b>
+
+                    </div>
+
+
+                    <div class="attorney-item">
+
+                        <div class="attorney-avatar">
+                            MB
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Michael Brown
+                            </strong>
+
+                            <span>
+                                Corporate Attorney
+                            </span>
+
+                        </div>
+
+                        <b>
+                            31 Cases
+                        </b>
+
+                    </div>
+
+
+                    <div class="attorney-item">
+
+                        <div class="attorney-avatar">
+                            JW
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                James Wilson
+                            </strong>
+
+                            <span>
+                                Litigation Attorney
+                            </span>
+
+                        </div>
+
+                        <b>
+                            28 Cases
+                        </b>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 APPOINTMENTS
+            ================================================== -->
+
+            <section
+                class="dashboard-card dashboard-section admin-extra-section"
+                id="appointments"
+                data-section-target="appointments"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            CALENDAR
+                        </span>
+
+                        <h2>
+                            Appointments
+                        </h2>
+
+                    </div>
+
+                    <a href="404.html" class="outline-btn">
+                        View Calendar
+                    </a>
+
+                </div>
+
+
+                <div class="appointment-list">
+
+                    <div class="appointment-item">
+
+                        <div class="appointment-time">
+                            09:30 AM
+                        </div>
+
+                        <div class="appointment-info">
+
+                            <strong>
+                                Client Consultation
+                            </strong>
+
+                            <span>
+                                Olivia Carter
+                            </span>
+
+                        </div>
+
+                        <small>
+                            Conference Room A
+                        </small>
+
+                    </div>
+
+
+                    <div class="appointment-item">
+
+                        <div class="appointment-time">
+                            11:00 AM
+                        </div>
+
+                        <div class="appointment-info">
+
+                            <strong>
+                                Case Review
+                            </strong>
+
+                            <span>
+                                Carter vs. Blake
+                            </span>
+
+                        </div>
+
+                        <small>
+                            Meeting Room 02
+                        </small>
+
+                    </div>
+
+
+                    <div class="appointment-item">
+
+                        <div class="appointment-time">
+                            03:30 PM
+                        </div>
+
+                        <div class="appointment-info">
+
+                            <strong>
+                                Legal Strategy Meeting
+                            </strong>
+
+                            <span>
+                                Internal Team
+                            </span>
+
+                        </div>
+
+                        <small>
+                            Board Room
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DOCUMENTS
+            ================================================== -->
+
+            <section
+                class="dashboard-card dashboard-section admin-extra-section"
+                id="documents"
+                data-section-target="documents"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            DOCUMENT CENTER
+                        </span>
+
+                        <h2>
+                            Recent Documents
+                        </h2>
+
+                    </div>
+
+                    <a href="404.html" class="outline-btn">
+                        View Documents
+                    </a>
+
+                </div>
+
+
+                <div class="document-list">
+
+                    <div class="document-item">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Merger Agreement.pdf
+                            </strong>
+
+                            <span>
+                                Corporate Merger · 4.8 MB
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-download"></i>
+
+                    </div>
+
+
+                    <div class="document-item">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Property Case Notes.docx
+                            </strong>
+
+                            <span>
+                                Property Dispute · 2.1 MB
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-download"></i>
+
+                    </div>
+
+
+                    <div class="document-item">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Client Agreement.pdf
+                            </strong>
+
+                            <span>
+                                Client Records · 1.6 MB
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-download"></i>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 REPORTS
+            ================================================== -->
+
+            <section
+                class="status-section dashboard-section"
+                id="reports"
+                data-section-target="reports"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Case Overview
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="404.html"
+                        class="outline-btn"
+                    >
+                        Full Report
+                    </a>
+
+                </div>
+
+
+                <div class="progress-grid">
+
+                    <div class="progress-item">
+
+                        <div class="progress-top">
+
+                            <span>
+                                Civil Litigation
+                            </span>
+
+                            <strong>
+                                82%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+                            <span class="progress-civil"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div class="progress-top">
+
+                            <span>
+                                Corporate Law
+                            </span>
+
+                            <strong>
+                                74%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+                            <span class="progress-corporate"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div class="progress-top">
+
+                            <span>
+                                Family Law
+                            </span>
+
+                            <strong>
+                                91%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+                            <span class="progress-family"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div class="progress-top">
+
+                            <span>
+                                Real Estate
+                            </span>
+
+                            <strong>
+                                67%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+                            <span class="progress-realestate"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section
+                class="dashboard-card dashboard-section settings-section"
+                id="settings"
+                data-section-target="settings"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ADMINISTRATION
+                        </span>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Profile Settings
+                            </h3>
+
+                            <p>
+                                Manage administrator profile
+                                information.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Security
+                            </h3>
+
+                            <p>
+                                Update password and security
+                                preferences.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Notifications
+                            </h3>
+
+                            <p>
+                                Control dashboard notification
+                                preferences.
+                            </p>
+
+                        </div>
+
+                        <a href="404.html">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <section
+                class="quick-section"
+                data-aos="fade-up"
+            >
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            QUICK ACCESS
+                        </span>
+
+                        <h2>
+                            Manage Your Office
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <a
+                        href="404.html"
+                        class="quick-card"
+                    >
+
+                        <div class="quick-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Add Client
+                            </h3>
+
+                            <p>
+                                Create a new client profile.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="quick-card"
+                    >
+
+                        <div class="quick-icon">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                New Appointment
+                            </h3>
+
+                            <p>
+                                Schedule a client meeting.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="quick-card"
+                    >
+
+                        <div class="quick-icon">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Upload Document
+                            </h3>
+
+                            <p>
+                                Add case documents securely.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="admin-footer">
+
+            <p>
+                © 2026 Sterling & Co. Law Firm.
+                All rights reserved.
+            </p>
+
+            <a href="index.html">
+
+                Back to Website
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </footer>
+
+    </main>
+
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1831 @@
+/* =========================================================
+   CORPORATE LAW FIRM
+   ONLY 3 UI COLORS
+   1. Navy
+   2. Gold
+   3. White
+========================================================= */
+
+:root {
+
+    --navy: #102A43;
+    --gold: #C9A227;
+    --white: #FFFFFF;
+
+    --container: 1240px;
+
+    --heading-font: "Playfair Display", serif;
+    --body-font: "DM Sans", sans-serif;
+
+    --transition: .35s ease;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(100% - 40px, var(--container));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 1px solid var(--navy);
+    transition: var(--transition);
+}
+
+.nav-wrapper {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+
+    object-fit: contain;
+
+    transition: 0.35s ease;
+}
+
+.logo:hover img {
+    transform: translateY(-2px);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .logo img {
+        width: 145px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 130px;
+    }
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav > a {
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
+.nav > a:not(.nav-btn)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: var(--transition);
+}
+
+.nav > a:hover::after,
+.nav > a.active::after {
+    width: 100%;
+}
+
+.nav-btn {
+    padding: 13px 20px;
+    background: var(--navy);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.nav-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--navy);
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: var(--gold);
+    z-index: 2000;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.section-space {
+    padding: 110px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+.eyebrow.dark {
+    color: var(--gold);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(38px, 5vw, 66px);
+}
+
+h2 span {
+    color: var(--gold);
+}
+
+p {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+    position: relative;
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    margin-top: 88px;
+    overflow: hidden;
+}
+
+.hero-image,
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    background: var(--navy);
+    opacity: .88;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 80px;
+}
+
+.breadcrumb a {
+    color: var(--gold);
+}
+
+.hero-copy {
+    max-width: 850px;
+}
+
+.hero-copy h1 {
+    font-size: clamp(50px, 7vw, 94px);
+    margin-bottom: 28px;
+}
+
+.hero-copy h1 em {
+    display: block;
+    color: var(--gold);
+    font-style: normal;
+}
+
+.hero-copy p {
+    max-width: 650px;
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 80px;
+}
+
+.section-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-number span {
+    font-family: var(--heading-font);
+    font-size: 50px;
+    color: var(--gold);
+}
+
+.section-number div {
+    width: 60px;
+    height: 1px;
+    background: var(--navy);
+    margin: 18px 0;
+}
+
+.section-number small {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.intro-content {
+    max-width: 850px;
+}
+
+.intro-content h2 {
+    margin-bottom: 30px;
+}
+
+.large-text {
+    font-size: 22px;
+    line-height: 1.65;
+    margin-bottom: 30px;
+}
+
+.intro-line {
+    width: 100%;
+    height: 1px;
+    background: var(--navy);
+    margin: 30px 0;
+}
+
+
+/* =========================================================
+   PRACTICE AREAS
+========================================================= */
+
+.expertise-section {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.section-heading {
+    max-width: 800px;
+    margin-bottom: 65px;
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--white);
+    width: 100%;
+}
+
+.practice-card {
+    min-height: 370px;
+    padding: 42px;
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    transition: var(--transition);
+    position: relative;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Gold only when hover */
+.practice-card:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+/* Remove default gold from featured */
+.practice-card.featured {
+    background: transparent;
+    color: var(--white);
+}
+
+.practice-card.featured:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.practice-icon {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: var(--gold);
+}
+
+.practice-card:hover .practice-icon,
+.practice-card.featured:hover .practice-icon {
+    color: var(--navy);
+}
+
+.practice-no {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.practice-card h3 {
+    font-size: 29px;
+    margin-bottom: 18px;
+    overflow-wrap: break-word;
+}
+
+.practice-card p {
+    margin-bottom: 30px;
+    opacity: .85;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+.practice-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+    .practice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 796px) {
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-card {
+        min-height: auto;
+        padding: 32px 24px;
+    }
+}
+/* =========================================================
+   CORPORATE FEATURE
+========================================================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.feature-image {
+    position: relative;
+}
+
+.feature-image img {
+    height: 620px;
+    object-fit: cover;
+}
+
+.image-label {
+    position: absolute;
+    right: -30px;
+    bottom: 35px;
+    width: 190px;
+    padding: 25px;
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.image-label strong {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 42px;
+}
+
+.image-label span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.feature-content h2 {
+    margin-bottom: 28px;
+}
+
+.feature-content > p {
+    margin-bottom: 28px;
+}
+
+.check-list {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.check-list i {
+    color: var(--gold);
+}
+
+.outline-btn,
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 23px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.outline-btn {
+    border: 1px solid var(--navy);
+}
+
+.outline-btn:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   LITIGATION
+========================================================= */
+
+.dark-feature {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.litigation-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.litigation-content h2 {
+    margin-bottom: 28px;
+}
+
+.litigation-content h2 em {
+    color: var(--gold);
+    font-style: normal;
+}
+
+.litigation-content p {
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.gold-btn {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.gold-btn:hover {
+    background: var(--white);
+}
+
+.litigation-image {
+    position: relative;
+}
+
+.litigation-image img {
+    height: 580px;
+    object-fit: cover;
+}
+
+.case-box {
+    position: absolute;
+    bottom: 30px;
+    left: -30px;
+    background: var(--white);
+    color: var(--navy);
+    padding: 25px;
+    width: 230px;
+}
+
+.case-box span {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.case-box strong {
+    font-family: var(--heading-font);
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   TRANSACTIONS
+========================================================= */
+
+.transaction-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.transaction-heading > div {
+    max-width: 700px;
+}
+
+.transaction-heading > p {
+    max-width: 370px;
+    align-self: flex-end;
+}
+
+.transaction-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.transaction-image img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.transaction-list {
+    border-top: 1px solid var(--navy);
+}
+
+.transaction-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 20px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--navy);
+}
+
+.transaction-item > span {
+    color: var(--gold);
+    font-family: var(--heading-font);
+    font-size: 25px;
+}
+
+.transaction-item h3 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.stats-heading {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--navy);
+    border-left: 1px solid var(--navy);
+}
+
+.stat-box {
+    min-height: 230px;
+    padding: 35px;
+    border-right: 1px solid var(--navy);
+    border-bottom: 1px solid var(--navy);
+}
+
+.stat-box strong {
+    font-family: var(--heading-font);
+    font-size: 60px;
+}
+
+.stat-box > span {
+    font-family: var(--heading-font);
+    font-size: 35px;
+}
+
+.stat-box p {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process-section {
+    background: var(--white);
+}
+
+.section-heading.center {
+    text-align: center;
+    margin-inline: auto;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.process-card {
+    position: relative;
+    padding: 45px 30px;
+    border: 1px solid var(--navy);
+    margin-left: -1px;
+    transition: var(--transition);
+}
+
+.process-card:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.process-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 10px;
+    color: var(--gold);
+}
+
+.process-card i {
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.process-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   INSIGHTS
+========================================================= */
+
+.insights-section {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.insights-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.text-link {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.article-card {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.article-image {
+    overflow: hidden;
+}
+
+.article-image img {
+    height: 270px;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.article-card:hover img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: 30px;
+}
+
+.article-content > span {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.article-content h3 {
+    font-size: 25px;
+    margin: 15px 0 25px;
+}
+
+.article-content a {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-section {
+    min-height: 650px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-image,
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.cta-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    background: var(--navy);
+    opacity: .9;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.cta-content h2 {
+    margin-bottom: 25px;
+}
+
+.cta-content p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+}
+/* =====================================================
+   EXPANDED FOOTER
+===================================================== */
+
+.footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 80px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.4fr 1.2fr;
+    gap: 50px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand p {
+    max-width: 320px;
+    color: var(--white);
+    line-height: 1.8;
+    font-size: 13px;
+    margin: 22px 0 28px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   CONSULTATION BUTTON
+===================================================== */
+
+.footer-consult-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 18px;
+
+    border: 1px solid var(--gold);
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+    text-decoration: none;
+
+    transition: .35s ease;
+}
+
+.footer-consult-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+.footer-consult-btn i {
+    transition: .35s ease;
+}
+
+.footer-consult-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+    display: grid;
+    align-content: start;
+    gap: 13px;
+}
+
+.footer-column h4 {
+    color: var(--gold);
+
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+
+    margin: 0 0 10px;
+}
+
+.footer-column a {
+    color: var(--white);
+    font-size: 12px;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   CONTACT DETAILS
+===================================================== */
+
+.footer-column a i,
+.footer-address i {
+    width: 18px;
+
+    color: var(--gold);
+
+    margin-right: 7px;
+}
+
+.footer-address {
+    display: flex;
+    align-items: flex-start;
+
+    color: var(--white);
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    margin: 5px 0 0;
+}
+
+.footer-address i {
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   EXTRA CONTACT
+===================================================== */
+
+.footer-contact-extra p {
+    color: var(--white);
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    margin: 0 0 8px;
+}
+
+.footer-contact-extra strong {
+    color: var(--gold);
+
+    font-size: 11px;
+    letter-spacing: .5px;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid var(--gold);
+
+    display: grid;
+    place-items: center;
+
+    color: var(--gold);
+
+    text-decoration: none;
+
+    transition: .35s ease;
+}
+
+.footer-socials a:hover {
+    background: var(--white);
+    color: var(--navy);
+
+    transform: translateY(-4px);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, .35);
+
+    margin-top: 60px;
+    padding-top: 22px;
+}
+
+.footer-bottom p {
+    color: var(--white);
+
+    font-size: 10px;
+
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.footer-bottom-links a {
+    color: var(--white);
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--gold);
+}
+
+
+/* =====================================================
+   FOOTER LOGO
+===================================================== */
+
+.footer .logo-mark {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.footer .logo-text strong {
+    color: var(--white);
+}
+
+.footer .logo-text small {
+    color: var(--gold);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 45px 35px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 796px) {
+
+    .footer {
+        padding: 60px 0 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-column h4 {
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: 45px;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .footer {
+        padding: 50px 0 18px;
+    }
+
+    .footer-consult-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-socials a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-bottom p {
+        line-height: 1.6;
+    }
+
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav {
+        gap: 18px;
+    }
+
+    .intro-grid {
+        gap: 40px;
+    }
+
+    .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid,
+    .litigation-grid,
+    .transaction-layout {
+        gap: 50px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: min(100% - 30px, var(--container));
+        max-width: 100%;
+    }
+
+    .nav {
+        position: fixed;
+
+        top: 88px;
+        right: -100%;
+
+        width: min(330px, 85%);
+        max-width: 100%;
+
+        height: calc(100vh - 88px);
+
+        padding: 35px;
+
+        background: var(--white);
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+
+        border-left: 1px solid var(--navy);
+
+        transition: var(--transition);
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .page-hero {
+        min-height: 620px;
+        overflow: hidden;
+    }
+
+    .breadcrumb {
+        margin-bottom: 50px;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-number {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section-number div {
+        margin: 0;
+    }
+
+    .section-number small {
+        display: none;
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid,
+    .litigation-grid,
+    .transaction-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .feature-image img,
+    .litigation-image img,
+    .transaction-image img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+    }
+
+    .transaction-heading,
+    .insights-heading {
+        display: block;
+    }
+
+    .transaction-heading > p {
+        margin-top: 25px;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 30px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   796px MOBILE BREAKPOINT
+========================================================= */
+
+@media (max-width: 796px) {
+
+    * {
+        max-width: 100%;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    main,
+    section,
+    header,
+    footer {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 30px);
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Header */
+
+    .header {
+        width: 100%;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo {
+        max-width: 180px;
+        overflow: hidden;
+    }
+
+    .logo img {
+        max-width: 150px;
+        height: auto;
+        display: block;
+    }
+
+
+    /* Mobile Menu */
+
+    .nav {
+        top: 88px;
+
+        width: min(420px, 100vw);
+        max-width: 120vw;
+
+        height: calc(100vh - 82px);
+
+        padding: 28px 22px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+
+    /* Hero */
+
+    .page-hero {
+        width: 100%;
+        min-height: 580px;
+
+        padding-left: 15px;
+        padding-right: 20px;
+
+        overflow: hidden;
+    }
+
+    .hero-copy {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-copy h1 {
+        max-width: 100%;
+
+        font-size: clamp(40px, 10vw, 54px);
+
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .hero-copy p {
+        max-width: 100%;
+
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Breadcrumb */
+
+    .breadcrumb {
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 35px;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        font-size: 13px;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* Section */
+
+    .section-space {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .intro-grid,
+    .practice-grid,
+    .feature-grid,
+    .litigation-grid,
+    .transaction-layout,
+    .articles-grid,
+    .process-grid,
+    .stats-grid,
+    .footer-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* Images */
+
+    .feature-image,
+    .litigation-image,
+    .transaction-image {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .feature-image img,
+    .litigation-image img,
+    .transaction-image img {
+        width: 100%;
+        max-width: 100%;
+
+        height: 430px;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+
+    /* Cards */
+
+    .practice-card,
+    .article-card,
+    .process-card,
+    .stat-box,
+    .case-box {
+        max-width: 100%;
+    }
+
+
+    /* Long Text */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span,
+    a {
+        overflow-wrap: break-word;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   550px
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .section-space {
+        padding: 75px 0;
+    }
+
+    .page-hero {
+        min-height: 560px;
+    }
+
+    .hero-copy h1 {
+        font-size: 48px;
+    }
+
+    .hero-copy p {
+        font-size: 16px;
+    }
+
+    .feature-image img,
+    .litigation-image img,
+    .transaction-image img {
+        height: 400px;
+    }
+
+    .image-label {
+        right: 15px;
+        max-width: calc(100% - 30px);
+    }
+
+    .case-box {
+        left: 15px;
+        max-width: calc(100% - 30px);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box {
+        min-height: 190px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 20px 0;
+    }
+
+}
+
+
+/* =========================================================
+   420px
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .page-hero {
+        min-height: 530px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero-copy h1 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .hero-copy p {
+        font-size: 14px;
+    }
+
+    .breadcrumb {
+        font-size: 12px;
+        gap: 7px;
+    }
+
+    .feature-image img,
+    .litigation-image img,
+    .transaction-image img {
+        height: 330px;
+    }
+
+    .image-label {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .case-box {
+        left: 10px;
+        bottom: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .logo img {
+        max-width: 125px;
+    }
+
+    .hero-copy h1 {
+        font-size: 34px;
+    }
+
+    .hero-copy p {
+        font-size: 13px;
+    }
+
+    .feature-image img,
+    .litigation-image img,
+    .transaction-image img {
+        height: 290px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
